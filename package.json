@@ -4,8 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "json-server db.json --port $PORT --host 0.0.0.0 --static ./public --cors",
-    "dev": "json-server db.json --port 8000 --host 0.0.0.0 --static ./public --cors"
+    "start": "json-server db.json --port $PORT --host 0.0.0.0 --static ./public",
+    "dev": "json-server db.json --port 8000 --host 0.0.0.0 --static ./public"
   },
   "dependencies": {
     "json-server": "^1.0.0-beta.1"
