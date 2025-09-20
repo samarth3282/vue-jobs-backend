@@ -1,0 +1,7 @@
+{
+    "port": 8000,
+    "watch": true,
+    "static": "./public",
+    "cors": true,
+    "readOnly": false
+}
