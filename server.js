@@ -1,14 +1,13 @@
-import { create, router as _router, defaults } from 'json-server';
+import jsonServer from 'json-server';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
-import { readFileSync } from 'fs';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const server = create();
-const router = _router(join(__dirname, 'db.json'));
-const middlewares = defaults({ static: join(__dirname, 'public') });
+const server = jsonServer.create();
+const router = jsonServer.router(join(__dirname, 'db.json'));
+const middlewares = jsonServer.defaults({ static: join(__dirname, 'public') });
 
 // Custom CORS middleware
 server.use((req, res, next) => {
